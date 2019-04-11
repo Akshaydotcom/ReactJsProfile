@@ -24,15 +24,15 @@ export class Header extends React.Component {
             <div>
           <Router>
               <div>
-              <Navbar className="navbar navbar-default" expand="lg">
+              <Navbar className="navbar navbar-default" bg="dark" variant="dark">
                 <div className="container-fluid">
                     <Navbar.Brand>Akshay's Profile</Navbar.Brand>
                     <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                            <Link to="/">Home </Link>
-                            <Link to="/AboutMe">About Me </Link>
-                            <Link to="/projectInfo">ProjectInfo </Link>
-                            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                            <Nav.Link><Link to="/">Home </Link></Nav.Link>
+                            <Nav.Link><Link to="/AboutMe">About Me </Link></Nav.Link>
+                            <Nav.Link><Link to="/projectInfo">ProjectInfo </Link></Nav.Link>
+                            <NavDropdown title="Dropdown" id="basic-nav-dropdown" >
                                 <NavDropdown.Item ><Link to="/ToDoList">ToDoList</Link></NavDropdown.Item>
                                 <NavDropdown.Item ><Link to="/Calculator">Calculator</Link></NavDropdown.Item>
                                 <NavDropdown.Divider />
