@@ -1,5 +1,7 @@
 import React from "react";
-
+import Carousel from 'react-bootstrap/Carousel';
+import CarouselItem from 'react-bootstrap/CarouselItem';
+import CarouselCaption from 'react-bootstrap/CarouselCaption';
 export class AboutMe extends React.Component{
     
     constructor(props){
@@ -49,13 +51,27 @@ export class AboutMe extends React.Component{
                     and a little bit of coding. But the most important thing I learnt and experienced there has to be communication. Communication with anyone, irrespective of age, gender, background etc. That is why I can say without a shadow of a doubt, I can handle any situation which is thrown my way satisfactorily. 
                     After all, if one can navigate the confusing life in a college filled with tens of thousands of students, one can handle a few client meetings with ease.
                     </p>
-                    <img  id="image1" src="src\app\Images\IMG_1823.jpg" width="75%" height="500px" style={{ position: 'relative', left: '5%'}}/>
+                    <Carousel style={{ backgroundColor:'black'}}>
+                        <CarouselItem>
+                            <img id="image1" src="src\app\Images\IMG_1823.jpg" slide="true" width="337px" height="500px" style={{position:'relative', left:'35%'}} />
+                            <CarouselCaption>
+                            <p style={{color:'white'}}>
+                            That's me during my College days. As you can see, I am rocking an Iron-Man T-shirt, which is just another testament to the fact that I love comics and superheroes a lot.
+                            </p>
+                            </CarouselCaption>
+                        </CarouselItem>
+                        <CarouselItem>
+                            <img id="image2" src="src\app\Images\IMG_20160214_162648.jpg" slide="true" height="500px" style={{position:'relative', left:'35%'}} />
+                            <CarouselCaption>
+                            <p style={{color:'white'}}>
+                            That's me going out with friends for a movie. I guess it was Deadpool way back in 2016. A little moustache and beard combo while growing up never hurt anyone :P   
+                            </p>    
+                            </CarouselCaption>
+                        </CarouselItem>
+                    </Carousel>
+                    
                     <br/>
-                    <p>
-                    That's me during my College days. As you can see, I am rocking an Iron-Man T-shirt, which is just another testament to the fact that I love comics and superheroes a lot. 
-                    I guess that's because I believe that humans have unlimited potential and the things superheroes do in movies could one day be done by normal people like me. 
-                    That gives me hope, hope that we are all meant for something much bigger than ourselves.
-                    </p>
+                   
                     <hr/>
                 </div>
                 <div className="bodyDivafterImage">
@@ -78,6 +94,7 @@ export class AboutMe extends React.Component{
         );
     }
 }
+
 
 // Home.propTypes = {
 //     name: React.PropTypes.string,
