@@ -3,9 +3,10 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import { Home } from './Home'
 import { AboutMe } from './AboutMe'
 import { ProjectInfo } from './ProjectInfo';
-import { ToDoList } from './ToDoList';
+import { ToDoList } from './ToDoList2';
 import { Calculator } from './Calculator';
 import { Book_Reviews } from './Book_Reviews';
+import { FictionalReviewsAboutMe } from './FictionalReviewsAboutMe';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Nav from 'react-bootstrap/Nav';
@@ -32,11 +33,12 @@ export class Header extends React.Component {
                             <Nav.Link><Link to="/">Home </Link></Nav.Link>
                             <Nav.Link><Link to="/AboutMe">About Me </Link></Nav.Link>
                             <Nav.Link><Link to="/projectInfo">ProjectInfo </Link></Nav.Link>
-                            <NavDropdown title="Dropdown" id="basic-nav-dropdown" >
+                            <NavDropdown title="WebApps" id="basic-nav-dropdown" >
                                 <NavDropdown.Item ><Link to="/ToDoList">ToDoList</Link></NavDropdown.Item>
                                 <NavDropdown.Item ><Link to="/Calculator">Calculator</Link></NavDropdown.Item>
                                 <NavDropdown.Divider />
                                 <NavDropdown.Item><Link to="/Book Reviews">Book Reviews</Link></NavDropdown.Item>
+                                <NavDropdown.Item><Link to="/FictionalReviewsAboutMe">Reviews About Me</Link></NavDropdown.Item>
                             </NavDropdown>
                         </Nav>
                     </Navbar.Collapse>
@@ -57,6 +59,7 @@ export class Header extends React.Component {
                   <Route path="/ToDoList" component={ToDoList}></Route>
                   <Route path="/Calculator" component={Calculator}></Route>
                   <Route path="/Book Reviews" component={Book_Reviews}></Route>
+                  <Route path="/FictionalReviewsAboutMe" component={FictionalReviewsAboutMe}></Route>
               </div>
           </Router>
           </div>
